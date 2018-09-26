@@ -7,6 +7,8 @@ root 'posts#index', as: 'home'
 # call localhost:3000/about display about.html
 get 'about' => 'pages#about', as: 'about'
 
-resources :posts
+resources :posts do
+	resources :comments
+end
 
 end
